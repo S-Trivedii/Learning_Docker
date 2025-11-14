@@ -249,3 +249,25 @@ And multi-stage builds make Docker images:
 ---
 
 **NOTE:** You can visit `Dockerfile.new` to see how a multi-stage build look like.
+
+---
+
+Two new commands:
+
+1.
+
+```
+docker build -t image_name -f name_of_Dockerfile .
+e.g.
+docker build -t typescript-node -f Dockerfile.new .
+```
+
+Building a Docker image named typescript-node, using the file Dockerfile.new, taking the current directory as the build context.
+
+---
+
+2.
+
+```
+docker run -it -e PORT=8000 image_name
+```
